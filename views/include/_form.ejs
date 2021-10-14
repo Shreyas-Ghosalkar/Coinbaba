@@ -1,0 +1,40 @@
+ <!-- form handling -->
+ <form action="/api/users" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Coin Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="chain" class="text-light">Chain</label>
+            <input type="text" name="chain" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="symbol" class="text-light">Symbol</label>
+            <input type="text" name="symbol" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="marketcap" class="text-light">Market Cap</label>
+            <input type="text" name="marketcap" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="price" class="text-light">Price</label>
+            <input type="text" name="price" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="launch" class="text-light">Launch Date</label>
+            <input type="text" name="launch" value="" placeholder="">
+        </div>
+        
+        <div class="form-group">
+            <label for="votes" class="text-light">Votes</label>
+            <input type="text" name="votes" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

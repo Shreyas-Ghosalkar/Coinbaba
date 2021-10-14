@@ -1,0 +1,19 @@
+<% for(var i = 0; i < users.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= users[i].name %></td>
+    <td><%= users[i].chain %></td>
+    <td><%= users[i].symbol %></td>
+    <td><%= users[i].marketcap %></td>
+    <td><%= users[i].price %></td>
+    <td><%= users[i].launch %></td>
+    <td><%= users[i].votes %></td>
+    <td>
+        
+
+        <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-heart"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>
