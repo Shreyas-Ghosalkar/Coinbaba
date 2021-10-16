@@ -33,7 +33,8 @@ if(window.location.pathname == "/"){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
-
+        var hasvoted=Cookies.get("Voted")
+        if(hasvoted !="true"){
         var request = {
             "url" : `https://coinbaba.herokuapp.com/api/users/${id}`,
             "method" : "PUT"
@@ -42,7 +43,10 @@ if(window.location.pathname == "/"){
         
             $.ajax(request).done(function(response){
                 location.reload();
-            })
+            })}
+        else{
+            alert("Already Voted");
+        }
         
 
     })
