@@ -17,7 +17,7 @@ $("#update_user").submit(function(event){
 
     var id = $(this).attr("data-id")
     var request = {
-        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
+        "url" : `http://coinbaba.herokuapp.com/api/users/${data.id}`,
         "method" : "PUT",
 
     }
@@ -35,18 +35,19 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
         var hasvoted=Cookies.get("Voted")
         if(hasvoted !="true"){
-        var request = {
-            "url" : `https://coinbaba.herokuapp.com/api/users/${id}`,
-            "method" : "PUT"
-        }
+            var request = {
+                "url" : `http://coinbaba.herokuapp.com/api/users/${id}`,
+                "method" : "PUT"
+            }
 
-        
-            $.ajax(request).done(function(response){
-                location.reload();
-            })}
-        else{
-            alert("Already Voted");
-        }
+            
+                $.ajax(request).done(function(response){
+                    Cookies.set("Voted","true",{expires:2})
+                    location.reload();
+                })}
+            else{
+                alert("Already Voted");
+            }
         
 
     })
