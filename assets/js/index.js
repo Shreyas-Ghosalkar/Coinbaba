@@ -33,8 +33,8 @@ if(window.location.pathname == "/"){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
- //       var hasvoted=Cookies.get("Voted")
-   //     if(hasvoted !="true"){
+        var hasvoted=Cookies.get("Voted")
+        if(hasvoted !="true"){
             var request = {
                 "url" : `http://coinbaba.herokuapp.com/api/users/${id}`,
                 "method" : "PUT"
@@ -45,10 +45,10 @@ if(window.location.pathname == "/"){
                     Cookies.set("Voted","true",{expires:2})
                     location.reload();
                 })
-//            }
-  //          else{
-    //            alert("Already Voted");
-      //      }
+           }
+            else{
+                alert("Already Voted");
+            }
         
 
     })
