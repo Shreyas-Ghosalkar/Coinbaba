@@ -34,11 +34,11 @@ body {
     transition: all 0.3s ease-out;
 }
 
-
+/*
 .navbar nav {
   display: none;
 }
-
+*/
 .navbar .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -567,5 +567,13 @@ table{
     margin: .5em 0;
 }
 
+.mobileContent{
+  display:none;
+}
+
+@media only screen and (min-device-width:320px)and (max-device-width: 480px){
+  .mobileContent{
+      display: inline;
+  }}
 
 
