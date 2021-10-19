@@ -35,6 +35,30 @@ body {
 }
 
 
+.advert img {
+  padding-left: 5px;
+  height: 100px;
+  width: auto;
+}
+.advert2 img {
+  padding-left: 360px;
+  height: 100px;
+  width: auto;
+}
+
+.advert {
+  padding-top: 10px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  height: 80px;
+}
+
+.menu-bg .advert {
+  padding-top: 50px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
 .navbar nav {
   display: none;
 }
