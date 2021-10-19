@@ -504,7 +504,7 @@ table{
 
 @media only screen and (max-width: 1024px){
     table, thead, tbody, th, td, tr{
-        display: inline-table;
+        display: table;
     }
 
     thead tr{
