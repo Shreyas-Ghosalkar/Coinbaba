@@ -36,12 +36,12 @@ body {
 
 
 .advert img {
-  padding-left: 5px;
+  padding-left: 80px;
   height: 100px;
   width: auto;
 }
 .advert2 img {
-  padding-left: 360px;
+  padding-left: 80px;
   height: 100px;
   width: auto;
 }
@@ -84,7 +84,7 @@ ul {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 0.5em;
 }
 
 .hero {
@@ -324,9 +324,9 @@ nav li a:hover {
     width: 1080px;
     margin: 0 auto;
   }
-  section {
-    padding: 10em 4em;
-  }
+ /* section {
+    padding: 5em 2em;
+  }*/
   .hero .container {
     display: -webkit-box;
     display: -ms-flexbox;
