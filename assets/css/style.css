@@ -502,7 +502,7 @@ table{
     border-color: #32383e;
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 120px){
     table, thead, tbody, th, td, tr{
         display: absolute;
     }
