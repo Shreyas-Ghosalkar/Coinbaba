@@ -17,7 +17,7 @@ $("#update_user").submit(function(event){
 
     var id = $(this).attr("data-id")
     var request = {
-        "url" : `http://coinbaba.herokuapp.com/api/users/${data.id}`,
+        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
         "method" : "PUT",
 
     }
@@ -36,7 +36,7 @@ if(window.location.pathname == "/"){
         var hasvoted=Cookies.get("Voted")
         if(hasvoted !="true"){
             var request = {
-                "url" : `http://coinbaba.herokuapp.com/api/users/${id}`,
+                "url" : `https://coinbaba.herokuapp.com/api/users/${id}`,
                 "method" : "PUT"
             }
 
