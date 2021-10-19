@@ -42,12 +42,12 @@ if(window.location.pathname == "/"){
 
             
                 $.ajax(request).done(function(response){
-                    Cookies.set("Voted","true",{expires:2})
+                    Cookies.set("Voted","true",{expires:1})
                     location.reload();
                 })
            }
             else{
-                alert("Already Voted");
+                alert("Wait for 24 Hours to vote again");
             }
         
 
