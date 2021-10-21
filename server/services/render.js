@@ -27,3 +27,7 @@ exports.update_user = (req, res) =>{
             res.send(err);
         })
 }
+
+exports.coin_details = (req, res) =>{
+    res.render('coin_details');
+}
