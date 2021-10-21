@@ -1,6 +1,7 @@
 const axios = require('axios');
 
 
+
 exports.homeRoutes = (req, res) => {
     // Make a get request to /api/users
     axios.get('https://coinbaba.herokuapp.com/api/users')
@@ -29,5 +30,11 @@ exports.update_user = (req, res) =>{
 }
 
 exports.coin_details = (req, res) =>{
-    res.render('coin_details');
+    axios.get('https://coinbaba.herokuapp.com/api/users', { params : { id : req.query.id }})
+    .then(function(userdata){
+        res.render("coin_details", { user : userdata.data})
+    })
+    .catch(err =>{
+        res.send(err);
+    })
 }

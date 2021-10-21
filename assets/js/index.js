@@ -17,7 +17,7 @@ $("#update_user").submit(function(event){
 
     var id = $(this).attr("data-id")
     var request = {
-        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
+        "url" : `https://coinbaba.herokuapp.com/${data.id}`,
         "method" : "PUT",
 
     }
@@ -53,3 +53,26 @@ if(window.location.pathname == "/"){
 
     })
 }
+
+$("#coin_details").submit(function(event){
+    event.preventDefault();
+
+    var unindexed_array = $(this).serializeArray();
+    var data = {}
+
+    $.map(unindexed_array, function(n, i){
+        data[n['name']] = n['value']
+    })
+
+    var id = $(this).attr("data-id")
+    var request = {
+        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
+        "method" : "PUT",
+
+    }
+
+    $.ajax(request).done(function(response){
+        location.reload()
+    })
+
+})

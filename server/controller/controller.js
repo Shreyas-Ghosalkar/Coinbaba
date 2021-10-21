@@ -108,3 +108,25 @@ exports.delete = (req, res)=>{
         res.status(500).send({ message : "Error Update user information"})
     })
 }
+
+exports.coin_details = (req, res)=>{
+    if(!req.body){
+        return res
+            .status(400)
+            .send({ message : "Data to update can not be empty"})
+    }
+
+    const id = req.params.id;
+    Userdb.findByIdAndUpdate(id, {$inc:{votes:1}}, { useFindAndModify: false})
+     .then(data => {
+            if(!data){
+                res.status(404).send({ message : `Cannot Update user with ${id}. Maybe user not found!`})
+            }else{
+                res.send()
+
+            }
+        })
+        .catch(err =>{
+            res.status(500).send({ message : "Error Update user information"})
+        })
+}

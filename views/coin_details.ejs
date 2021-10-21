@@ -4,7 +4,50 @@
 <!-- /include header -->
 
   <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+ <form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <input type="hidden" name="id" value="<%= user._id %>">
+        </div>
+        
+ 
+        
+        <table>
+          <tr>
+            <th>Coin name</th>
+            <th>Market Cap</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td class="text-center"><%= user.name %></td>
+            <td class="text-center"><%= user.marketcap %></td>
+            <td class="text-center"><%= user.price %></td>
+          </tr>
+          <tr>
 
+            <th >Votes</th>
+          </tr>
+          <tr>
+
+            <td class="text-center"><%= user.votes %></td>
+          </tr>
+
+        </table>
+   
+    
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Vote</button>
+        </div>
+
+    </div>
+</form>
+
+       
+    </div>
+</main>
 <!-- /Main Site -->
 
 <!-- include footer -->
