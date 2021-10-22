@@ -74,6 +74,7 @@ $("#coin_details").submit(function(event){
     }
 
     $.ajax(request).done(function(response){
+        Cookies.set("Voted","true",{expires:1})
         location.reload()
     })
 }
