@@ -1,0 +1,27 @@
+
+<%var promoted=['Bitcoin','Ethereum']%>
+<% for(var i = 0; i < users.length; i++) { %>
+    <% for(var j = 0; j < promoted.length; j++) { %>
+        <%if(users[i].name==promoted[j]){%>
+            <tr>
+                <td><%= i + 1 %></td>
+                <td><a href="/coin_details?id=<%= users[i]._id%>"><%= users[i].name %></a></td>
+                <td class="mobileContent"><%= users[i].chain %></td>
+                <td class="mobileContent"><%= users[i].symbol %></td>
+                <td class="mobileContent"><%= users[i].marketcap %></td>
+                <td><%= users[i].price %></a></td>
+                <td class="mobileContent"><%= users[i].launch %></td>
+                <td><%= users[i].votes %></td>
+                <td>
+                    
+            
+                    <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
+                        <span class="text-gradient"><i class="fas fa-heart"></i></span>
+                    </a>
+                </td>
+            </tr>
+    <% }}} %>
+    
+    
+    
+    
