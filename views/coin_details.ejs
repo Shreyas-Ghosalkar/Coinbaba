@@ -6,40 +6,43 @@
   <!-- Main Site -->
   <main id="site-main">
     <div class="container">
- <form method="POST" id="update_user">
+        
+        <div class="text-center">
+            <h2 class="text-dark"><%= user.name %></h2>
+        </div>
+        <h4 class="text-dark">Description</h4>
+
+        <table>
+          <tr class="text-center">
+            <th>Market Cap</th>
+            <th>Price</th>
+            <th>Chain</th>
+            <th>Launch</th>
+            <th >Votes</th>
+          </tr>
+          <tr>
+            <td class="text-center"><%= user.marketcap %></td>
+            <td class="text-center"><%= user.price %></td>
+            <td class="text-center"><%= user.chain %></td>
+            <td class="text-center"><%= user.launch %></td>
+            <td class="text-center"><%= user.votes %></td>
+          </tr>
+         
+
+        </table>
+        
+         <!-- form handling -->
+         <section>
+ <form method="POST" id="coin_details">
     <div class="new_user">
         <div class="form-group">
             <input type="hidden" name="id" value="<%= user._id %>">
         </div>
-        
- 
-        
-        <table>
-          <tr>
-            <th>Coin name</th>
-            <th>Market Cap</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td class="text-center"><%= user.name %></td>
-            <td class="text-center"><%= user.marketcap %></td>
-            <td class="text-center"><%= user.price %></td>
-          </tr>
-          <tr>
-
-            <th >Votes</th>
-          </tr>
-          <tr>
-
-            <td class="text-center"><%= user.votes %></td>
-          </tr>
-
-        </table>
-   
-    
-
         <div class="form-group">
-            <button type="submit" class="btn text-dark update">Vote</button>
+        <div class="text-center">
+            <button type="submit" class="btn text-dark update">VOTE</button>
+        </div>
+      </section>
         </div>
 
     </div>

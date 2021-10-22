@@ -577,9 +577,9 @@ table{
 }
 
 
-#update_user .form-group .btn,
+#update_user .form-group .btn,#coin_details .form-group .btn,
 #add_user .form-group .btn{
-    width: 100%;
+    width: 30%;
     padding: .9em 1em;
     background-color:#bcbebd; 
     border: none;
