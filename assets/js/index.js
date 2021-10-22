@@ -77,7 +77,8 @@ $("#coin_details").submit(function(event){
         location.reload()
     })
 }
-else{
+else
+{
     alert("Wait for 24 Hours to vote again");
 }
 
