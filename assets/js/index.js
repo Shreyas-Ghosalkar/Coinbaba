@@ -65,6 +65,8 @@ $("#coin_details").submit(function(event){
     })
 
     var id = $(this).attr("data-id")
+    var hasvoted=Cookies.get("Voted")
+    if(hasvoted !="true"){
     var request = {
         "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
         "method" : "PUT",
@@ -74,5 +76,9 @@ $("#coin_details").submit(function(event){
     $.ajax(request).done(function(response){
         location.reload()
     })
+}
+else{
+    alert("Wait for 24 Hours to vote again");
+}
 
 })
