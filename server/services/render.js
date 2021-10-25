@@ -38,3 +38,13 @@ exports.coin_details = (req, res) =>{
         res.send(err);
     })
 }
+
+exports.search = (req, res) =>{
+    axios.get('https://coinbaba.herokuapp.com/api/users', { params : { name : req.query.name }})
+        .then(function(userdata){
+            res.render("search", { user : userdata.data})
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+}

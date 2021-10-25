@@ -11,11 +11,14 @@ exports.create = (req,res)=>{
     // new user
     const user = new Userdb({
         name : req.body.name,
+        description : req.body.description,
         chain : req.body.chain,
         symbol : req.body.symbol,
         marketcap : req.body.marketcap,
         price : req.body.price,
         launch : req.body.launch,
+        telegram_link : req.body.telegram_link,
+        coin_website : req.body.coin_website,
         votes:req.body.votes
     })
 
@@ -74,20 +77,18 @@ exports.update = (req, res)=>{
     }
 
     const id = req.params.id;
-    Userdb.findByIdAndUpdate(id, {$inc:{votes:1}}, { useFindAndModify: false})
-     .then(data => {
+    Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
+        .then(data => {
             if(!data){
                 res.status(404).send({ message : `Cannot Update user with ${id}. Maybe user not found!`})
             }else{
-                res.send()
-
+                res.send(data)
             }
         })
         .catch(err =>{
             res.status(500).send({ message : "Error Update user information"})
         })
 }
-
 
 
 // Delete a user with specified user id in the request
@@ -130,4 +131,34 @@ exports.coin_details = (req, res)=>{
         .catch(err =>{
             res.status(500).send({ message : "Error Update user information"})
         })
+}
+
+exports.search = (req, res,next)=>{
+ 
+    if(req.query.name){
+        const name = req.query.name;
+
+        Userdb.findById(name)
+            .then(data =>{
+                if(!data){
+                    res.status(404).send({ message : "Not found user with id "+ id})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err =>{
+                res.status(500).send({ message: "Erro retrieving user with id " + id})
+            })
+
+    }else{
+        Userdb.find().sort({"votes":-1})
+            .then(user => {
+                res.send(user)
+            })
+            .catch(err => {
+                res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
+            })
+    }
+
+    
 }

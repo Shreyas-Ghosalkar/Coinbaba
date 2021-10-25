@@ -5,29 +5,42 @@ var schema = new mongoose.Schema({
         type : String,
         required: true
     },
+    description : {
+        type: String,
+        required: false,
+    },
     chain : {
         type: String,
-        required: true,
+        required: false,
     },
     symbol : {
         type: String,
-        required: true,
+        required: false,
     },
     marketcap : {
         type: String,
-        required: true,
+        required: false,
     },
     price : {
         type: String,
-        required: true,
+        required: false,
     },
     launch : {
         type: String,
-        required: true,
+        required: false,
+    },
+    
+    telegram_link : {
+        type: String,
+        required: false,
+    },
+    coin_website : {
+        type: String,
+        required: false,
     },
     votes : {
         type: Number,
-        required: true,
+        required: false,
     }
 })
 

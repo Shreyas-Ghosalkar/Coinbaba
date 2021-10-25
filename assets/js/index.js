@@ -15,15 +15,15 @@ $("#update_user").submit(function(event){
         data[n['name']] = n['value']
     })
 
-    var id = $(this).attr("data-id")
-    var request = {
-        "url" : `https://coinbaba.herokuapp.com/${data.id}`,
-        "method" : "PUT",
 
+    var request = {
+        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
+        "method" : "PUT",
+        "data" : data
     }
 
     $.ajax(request).done(function(response){
-        location.reload()
+        alert("Data Updated Successfully!");
     })
 
 })
