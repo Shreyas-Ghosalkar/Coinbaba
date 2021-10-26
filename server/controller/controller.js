@@ -39,11 +39,24 @@ exports.create = (req,res)=>{
 
 // retrieve and return all users/ retrive and return a single user
 exports.find = (req, res)=>{
-
     if(req.query.id){
-        const id = req.query.id;
+        const id= req.query.id;
 
         Userdb.findById(id)
+            .then(data =>{
+                if(!data){
+                    res.status(404).send({ message : "Not found user with id "+ id})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err =>{
+                res.status(500).send({ message: "Erro retrieving user with id " + id})
+            })}
+
+    else if(req.query.name){
+        var regex = new RegExp(req.query.name,'i')
+        Userdb.find({name:{$regex:regex}})
             .then(data =>{
                 if(!data){
                     res.status(404).send({ message : "Not found user with id "+ id})
@@ -56,6 +69,7 @@ exports.find = (req, res)=>{
             })
 
     }else{
+        const id= req.query.id;
         Userdb.find().sort({"votes":-1})
             .then(user => {
                 res.send(user)
@@ -67,7 +81,6 @@ exports.find = (req, res)=>{
 
     
 }
-
 // Update a new idetified user by user id
 exports.update = (req, res)=>{
     if(!req.body){
@@ -118,7 +131,7 @@ exports.coin_details = (req, res)=>{
             .send({ message : "Data to update can not be empty"})
     }
 
-    const id = req.params.id;
+    const id = req.params.name;
     Userdb.findByIdAndUpdate(id, {$inc:{votes:1}}, { useFindAndModify: false})
      .then(data => {
             if(!data){
@@ -133,12 +146,26 @@ exports.coin_details = (req, res)=>{
         })
 }
 
-exports.search = (req, res,next)=>{
- 
-    if(req.query.name){
-        const name = req.query.name;
 
-        Userdb.findById(name)
+exports.search = (req, res)=>{
+    if(req.query.id){
+        const id= req.query.id;
+
+        Userdb.findById(id)
+            .then(data =>{
+                if(!data){
+                    res.status(404).send({ message : "Not found user with id "+ id})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err =>{
+                res.status(500).send({ message: "Erro retrieving user with id " + id})
+            })}
+
+    else if(req.query.name){
+        var regex = new RegExp(req.query.name,'i')
+        Userdb.find({name:{$regex:regex}})
             .then(data =>{
                 if(!data){
                     res.status(404).send({ message : "Not found user with id "+ id})
@@ -151,6 +178,7 @@ exports.search = (req, res,next)=>{
             })
 
     }else{
+        const id= req.query.id;
         Userdb.find().sort({"votes":-1})
             .then(user => {
                 res.send(user)

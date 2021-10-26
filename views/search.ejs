@@ -1,15 +1,11 @@
 
 <!-- include header -->
-    <%- include('include/_header') %>
+<%- include('include/_header') %>
 <!-- /include header -->
 
 
     <!-- Main Site -->
-    <main id="site-main">
-        
-        <div class="container">
             <!-- form handling -->
-            <form action="/" method="POST">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
@@ -25,39 +21,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <ul><a class="advert" href="/"><img src="img/adv.gif" alt="Coinbaba"></a></ul>
-                    
-                        <h3>COINS OF THE DAY</h3>
-                        <h3>PROMOTED</h3>
-                        <%- include('include/_promoted') %>
-                    </tbody>
-                </table>
-            </form>
-        </div>
-        <section class="">
-            <!-- form handling -->
-            <form class="search" action="search" method="GET">
-                <input type="text" placeholder="Search Coin" name="name">
-                <button type="submit"><a href="/search"></a><i class="fa fa-search"></i></button>
-              </form>
-            <form action="/" method="POST">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>#</th>
-                            <th>Coin</th>
-                            <th class="mobileContent">Chain</th>
-                            <th class="mobileContent">Symbol</th>
-                            <th class="mobileContent">Market Cap</th>
-                            <th>Price</th>
-                            <th class="mobileContent">Launch Date</th>
-                            <th>Votes</th>
-                            <th>Vote</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                              <div class="navbar">
+                        <div class="navbar">
                             <div class="container">
                     
                                 <img id="mobile-cta" class="mobile-menu">
@@ -76,11 +40,8 @@
                         <%- include('include/_show') %>
                     </tbody>
                 </table>
-            </form>
+
             
-        </section>
-    </main>
-<!-- /Main Site -->
 
 
 <!-- include footer -->
