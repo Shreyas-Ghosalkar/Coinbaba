@@ -30,7 +30,7 @@ route.get('/api/users', controller.find);
 route.put('/api/users/:id', controller.update);
 route.delete('/api/users/:id', controller.delete);
 route.put('/api/users/:id', controller.coin_details);
-route.get('/api/users', controller.search);
+route.get('/api/users/:id', controller.search);
 
 
 
