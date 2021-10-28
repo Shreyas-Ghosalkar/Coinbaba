@@ -6,78 +6,68 @@
 
     <!-- Main Site -->
     <main id="site-main">
+        <div class="page-section py-5"></div>
         <div class="container">
+            
             <!-- form handling -->
+
             <form action="/" method="POST">
                 <table class="table">
+                    
                     <thead class="thead-dark">
                         <tr>
                             <th>#</th>
                             <th>Coin</th>
-                            <th class="mobileContent">Chain</th>
-                            <th class="mobileContent">Symbol</th>
-                            <th class="mobileContent">Market Cap</th>
-                            <th>Price</th>
-                            <th class="mobileContent">Launch Date</th>
-                            <th>Votes</th>
+                            <th class="mobile_content">Chain</th>
+                            <th class="mobile_content">Symbol</th>
+                            <th class="mobile_content">Market Cap</th>
+                            <th class="mobile_content">Price</th>
+                            <th class="mobile_content">Launch Date</th>
                             <th>Vote</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <ul><a class="advert" href="/"><img src="img/adv.gif" alt="Coinbaba"></a></ul>
-                    
+                        <h1></h1>
                         <h3>COINS OF THE DAY</h3>
                         <h3>PROMOTED</h3>
+                        
                         <%- include('include/_promoted') %>
                     </tbody>
                 </table>
             </form>
         </div>
-        <section class="">
+    </div>
+        </main>
+            <div class="page-section py-5">
+            <div class="container">
             <!-- form handling -->
-            <form class="search" action="search" method="GET">
-                <input type="text" placeholder="Search Coin" name="name">
-                <button type="submit"><a href="/search"></a><i class="fa fa-search"></i></button>
+            <form action="search" method="GET">
+                <input type="text" class="form-control" placeholder="Search Coin .." name="name">
               </form>
             <form action="/" method="POST">
+
+                
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th>#</th>
                             <th>Coin</th>
-                            <th class="mobileContent">Chain</th>
-                            <th class="mobileContent">Symbol</th>
-                            <th class="mobileContent">Market Cap</th>
-                            <th>Price</th>
-                            <th class="mobileContent">Launch Date</th>
-                            <th>Votes</th>
+                            <th class="mobile_content">Chain</th>
+                            <th class="mobile_content">Symbol</th>
+                            <th class="mobile_content">Market Cap</th>
+                            <th class="mobile_content">Price</th>
+                            <th class="mobile_content">Launch Date</th>
                             <th>Vote</th>
                         </tr>
                     </thead>
                     <tbody>
-                        
-                              <div class="navbar">
-                            <div class="container">
-                    
-                                <img id="mobile-cta" class="mobile-menu">
-                    
-                                <nav>
-                                    <img id="mobile-exit" class="mobile-menu-exit">
-                                
-                                    <ul class="primary-nav">
-                                        <li><a href="/">All Coins</a></li>
-                                        <li><a href="/">New Coins</a></li>
-                                    </ul>
-                                    
-                                </nav>
-                            </div>
-                        </div>
+                        <h3>All Coins</h3>
                         <%- include('include/_show') %>
                     </tbody>
                 </table>
             </form>
-            
-        </section>
+        </div>
+        </div>
     </main>
 <!-- /Main Site -->
 
