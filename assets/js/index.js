@@ -45,7 +45,7 @@ function cookiesEnabled()
 
 
 if((window.location.pathname == "/") || (window.location.pathname=="/search")){
-    $ondelete = $(".table tbody td a.delete");
+    $ondelete = $(".table tbody td button.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
         var hasvoted=Cookies.get("iopl")
