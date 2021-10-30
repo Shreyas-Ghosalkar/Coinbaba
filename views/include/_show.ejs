@@ -8,9 +8,9 @@
     <td class="mobile_content"><%= users[i].price %></td>
     <td class="mobile_content"><%= users[i].launch %></td>
     <td>
-        <button type="button" class="btn btn-primary btn-sm mt-2 delete" data-id=<%= users[i]._id%> >
+        <a type="button" class="btn btn-primary btn-sm mt-2 delete" data-id=<%= users[i]._id%> >
             <span class="text-gradient"><%= users[i].votes %></span>
-        </button>
+        </a>
     </td>
 </tr>
 <% } %>
