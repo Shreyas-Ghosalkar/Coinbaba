@@ -1,54 +1,42 @@
  <!-- form handling -->
- <div class="page-section py-5"></div>
  <form action="/api/users" method="POST" id="add_user">
-    <div class="text-center">
+    <div class="new_user">
         <div class="form-group">
-            <label for="name" class="text-dark">Coin Name</label>
+            <label for="name" class="text-light">Name</label>
             <input type="hidden" name="id" value="">
-            <input type="text" name="name" value="" placeholder="">
+            <input type="text" name="name" value="" placeholder="Mark Stoenis">
         </div>
         <div class="form-group">
-            <label for="description" class="text-dark">Description</label>
-            <input type="text" name="description" value="" placeholder="">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="" placeholder="example@gmail.com">
         </div>
         <div class="form-group">
-            <label for="chain" class="text-dark">Chain</label>
-            <input type="text" name="chain" value="" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="symbol" class="text-dark">Symbol</label>
-            <input type="text" name="symbol" value="" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="marketcap" class="text-dark">Market Cap</label>
-            <input type="text" name="marketcap" value="" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="price" class="text-dark">Price</label>
-            <input type="text" name="price" value="" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="launch" class="text-dark">Launch Date</label>
-            <input type="text" name="launch" value="" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="telegram_link" class="text-dark">Telegram Link</label>
-            <input type="text" name="telegram_link" value="" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="coin_website" class="text-dark">Coin Website</label>
-            <input type="text" name="coin_website" value="" placeholder="">
-        </div>
-        
-        <div class="form-group">
-            <label for="votes" class="text-dark">Votes</label>
-            <input type="text" name="votes" value="" placeholder="">
+            <label for="gender" class="text-light">Gender</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male" >
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="Female" >
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn-primary update">Save</button>
+            <label for="gender" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Active" >
+                <label for="radio-4" class="radio-label">Active</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Inactive" >
+                <label for="radio-5" class="radio-label">Inactive</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
         </div>
 
     </div>
 </form>
-</div>

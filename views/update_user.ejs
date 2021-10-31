@@ -8,71 +8,57 @@
     <div class="container">
         <div class="box-nav d-flex justify-between">
            <div class="filter">
-               <a href="/"><i class="fas fa-angle-double-left"></i> All Coins</a>
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Users</a>
            </div>
         </div>
         <div class="form-title text-center">
-            <h2 class="text-dark"></h2>
+            <h2 class="text-dark">Update User</h2>
+            <span class="text-light">Use the below form to Update an account</span>
         </div>
 
         <!-- add user form -->
          <!-- form handling -->
  <form method="POST" id="update_user">
     <div class="new_user">
- 
         <div class="form-group">
-            <label for="name" class="text-light">Coin Name</label>
+            <label for="name" class="text-light">Name</label>
             <input type="hidden" name="id" value="<%= user._id %>">
-            <input type="text" name="name" value="<%= user.name %>" placeholder="">
+            <input type="text" name="name" value="<%= user.name %>" placeholder="Mark Stoenis">
+        </div>
+        <div class="form-group">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="<%= user.email%>" placeholder="example@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="gender" class="text-light">Gender</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male" <%= user.gender == 'Male' ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="Female"  <%= user.gender == 'Female' ? 'checked' : '' %> >
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
         </div>
 
         <div class="form-group">
-            <label for="description" class="text-light">Description</label>
-            <input type="text" name="description" value="<%= user.description %>" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="chain" class="text-light">Chain</label>
-            <input type="text" name="chain" value="<%= user.chain %>" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="symbol" class="text-light">Symbol</label>
-            <input type="text" name="symbol" value="<%= user.symbol %>" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="marketcap" class="text-light">Market Cap</label>
-            <input type="text" name="marketcap" value="<%= user.marketcap %>" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="price" class="text-light">Price</label>
-            <input type="text" name="price" value="<%= user.price %>" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="launch" class="text-light">Launch Date</label>
-            <input type="text" name="launch" value="<%= user.launch %>" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="telegram_link" class="text-light">Telegram Link</label>
-            <input type="text" name="telegram_link" value="<%= user.telegram_link %>" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="coin_website" class="text-light">Coin Website</label>
-            <input type="text" name="coin_website" value="<%= user.coin_website %>" placeholder="">
-        </div>
-        
-        <div class="form-group">
-            <label for="votes" class="text-light">Votes</label>
-            <input type="text" name="votes" value="<%= user.votes %>" placeholder="">
+            <label for="gender" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Active" <%= user.status == 'Active' ? 'checked' : '' %> >
+                <label for="radio-4" class="radio-label">Active</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Inactive" <%= user.status == 'Inactive' ? 'checked' : '' %> >
+                <label for="radio-5" class="radio-label">Inactive</label>
+            </div>
         </div>
 
-    
-    
         <div class="form-group">
-            <button type="submit" class="btn text-dark update">Update</button>
+            <button type="submit" class="btn text-dark update">Save</button>
         </div>
 
     </div>
 </form>
-
        
     </div>
 </main>

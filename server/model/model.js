@@ -5,43 +5,13 @@ var schema = new mongoose.Schema({
         type : String,
         required: true
     },
-    description : {
+    email : {
         type: String,
-        required: false,
+        required: true,
+        unique: true
     },
-    chain : {
-        type: String,
-        required: false,
-    },
-    symbol : {
-        type: String,
-        required: false,
-    },
-    marketcap : {
-        type: String,
-        required: false,
-    },
-    price : {
-        type: String,
-        required: false,
-    },
-    launch : {
-        type: String,
-        required: false,
-    },
-    
-    telegram_link : {
-        type: String,
-        required: false,
-    },
-    coin_website : {
-        type: String,
-        required: false,
-    },
-    votes : {
-        type: Number,
-        required: false,
-    }
+    gender : String,
+    status : String
 })
 
 const Userdb = mongoose.model('userdb', schema);

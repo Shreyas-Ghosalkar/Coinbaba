@@ -21,17 +21,13 @@ route.get('/add-user', services.add_user)
  *  @method GET /update-user
  */
 route.get('/update-user', services.update_user)
-route.get('/coin_details', services.coin_details)
-route.get('/search', services.search)
+
 
 // API
 route.post('/api/users', controller.create);
 route.get('/api/users', controller.find);
 route.put('/api/users/:id', controller.update);
 route.delete('/api/users/:id', controller.delete);
-route.put('/api/users/:id', controller.coin_details);
-route.get('/api/users/:id', controller.search);
-
 
 
 module.exports = route
