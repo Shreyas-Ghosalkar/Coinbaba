@@ -1,0 +1,65 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        
+        <div class="text-center">
+            <h2 class="text-dark"><%= user.name %></h2>
+        </div>
+        <h4 class="text-dark">Description</h4>
+        <p class="text-dark"><%= user.description%></p>
+        <td> <a class="icon" href="/"><img src="img/<%= user.name %>.png" alt=""></a></td>
+
+        <table>
+          <tr class="text-center">
+            <th>Market Cap</th>
+            <th>Price</th>
+            <th>Chain</th>
+            <th>Launch</th>
+            <th >Votes</th>
+          </tr>
+          <tr>
+            <td class="text-center"><%= user.marketcap %></td>
+            <td class="text-center"><%= user.price %></td>
+            <td class="text-center"><%= user.chain %></td>
+            <td class="text-center"><%= user.launch %></td>
+            <td class="text-center"><%= user.votes %></td>
+          </tr>
+         
+
+        </table>
+        <section>
+        <ul>
+              <a href="https://t.me/"><i class="fab fa-telegram"></i>Telegram</a></li>
+      </ul>
+    </section>
+        
+         <!-- form handling -->
+         <section>
+ <form method="POST" id="coin_details">
+    <div class="new_user">
+        <div class="form-group">
+            <input type="hidden" name="id" value="<%= user._id %>">
+        </div>
+        <div class="form-group">
+        <div class="text-center">
+            <button type="submit" class="btn-primary coin_details">VOTE</button>
+        </div>
+      </section>
+        </div>
+
+    </div>
+</form>
+
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
