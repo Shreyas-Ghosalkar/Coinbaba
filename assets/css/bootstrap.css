@@ -83,6 +83,25 @@ body {
 }
 
 
+.icon img {
+  height: 20px;
+  width: auto;
+}
+
+.icon {
+  padding-top: 0px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  height: 30px;
+}
+
+.menu-bg .icon {
+  padding-top: 2px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }

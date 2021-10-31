@@ -5,6 +5,7 @@
         <%if(users[i].name==promoted[j]){%>
             <tr>
                 <td><%= i + 1 %></td>
+                <td> <a class="icon" href="/"><img src="img/<%= users[i].name %>.png" alt=""></a></td>
                 <td><a href="/coin_details?id=<%= users[i]._id%>"><%= users[i].name %></a></td>
                 <td class="mobile_content"><%= users[i].chain %></td>
                 <td class="mobile_content"><%= users[i].symbol %></td>
