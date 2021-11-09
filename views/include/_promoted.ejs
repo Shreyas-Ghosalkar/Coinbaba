@@ -15,11 +15,11 @@
                     
             
                     <a class="delete" data-id=<%= users[i]._id%> >
-            <span class="text-gradient"><%= users[i].votes %></span>
+            <button class="delete"><%= users[i].votes %></button>
         </a>
 					
-					<a class="delete" data-id=<%= users[i]._id%>>
-                        <button class="btn-primary delete">Save</button>
+					<a>
+                        <button class="btn-primary delete" data-id=<%= users[i]._id%>>Save</button>
                     </a>
                 </td>
             </tr>
