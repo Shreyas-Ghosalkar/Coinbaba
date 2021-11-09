@@ -3486,14 +3486,14 @@ input[type="button"].btn-block {
 
 .btn-group > .btn:hover,
 .btn-group-vertical > .btn:hover {
-  z-index: 1;
+  z-index: 2000;
 }
 
 .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .btn.active {
-  z-index: 1;
+  z-index: 2000;
 }
 
 .btn-toolbar {
@@ -3637,11 +3637,11 @@ input[type="button"].btn-block {
 .input-group > .form-control:focus,
 .input-group > .custom-select:focus,
 .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
-  z-index: 3;
+  z-index: 2000;
 }
 
 .input-group > .custom-file .custom-file-input:focus {
-  z-index: 4;
+  z-index: 2000;
 }
 
 .input-group > .form-control:not(:last-child),
@@ -3683,12 +3683,12 @@ input[type="button"].btn-block {
 .input-group-prepend .btn,
 .input-group-append .btn {
   position: relative;
-  z-index: 2;
+  z-index: 2000;
 }
 
 .input-group-prepend .btn:focus,
 .input-group-append .btn:focus {
-  z-index: 3;
+  z-index: 2000;
 }
 
 .input-group-prepend .btn + .btn,
