@@ -96,8 +96,10 @@ exports.delete = (req, res)=>{
     Userdb.findByIdAndUpdate(id, {$inc:{votes:1}}, { useFindAndModify: false})
     .then(data => {
         if(!data){
+            
             res.status(404).send({ message : `Cannot Update user with ${id}. Maybe user not found!`})
         }else{
+            
             res.send()
 
         }
