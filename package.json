@@ -1,5 +1,5 @@
 {
-  "name": "Coibaba",
+  "name": "crud_app",
   "version": "1.0.0",
   "description": "crud application with express and mongodb",
   "main": "server.js",
@@ -11,7 +11,7 @@
     "crud",
     "mongodb"
   ],
-  "author": "RST",
+  "author": "akshay kashyap",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.4",
