@@ -6,29 +6,67 @@
 
     <!-- Main Site -->
     <main id="site-main">
+        <div class="page-section py-5"></div>
         <div class="container">
+            
             <!-- form handling -->
-            <form action="/" method="POST">
+
+            <form action="/" method="">
+                <table class="table">
+                    
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Coin</th>
+                            <th class="mobile_content">Chain</th>
+                            <th class="mobile_content">Symbol</th>
+                            <th class="mobile_content">Market Cap</th>
+                            <th class="mobile_content">Price</th>
+                            <th class="mobile_content">Launch Date</th>
+                            <th>Vote</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <h1></h1>
+                        <h3>COINS OF THE DAY</h3>
+                        <h3>PROMOTED</h3>
+                        
+                        <%- include('include/_promoted') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+        </main>
+            <div class="page-section py-5">
+            <div class="container">
+            <!-- form handling -->
+            <form action="search" method="GET">
+                <input type="text" class="form-control" placeholder="Search Coin .." name="name">
+              </form>
+            <form action="/" method="">
+
+                
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th>#</th>
                             <th>Coin</th>
-                            <th>Chain</th>
-                            <th>Symbol</th>
-                            <th>Market Cap</th>
-                            <th>Price</th>
-                            <th>Launch Date</th>
-                            <th>Votes</th>
+                            <th class="mobile_content">Chain</th>
+                            <th class="mobile_content">Symbol</th>
+                            <th class="mobile_content">Market Cap</th>
+                            <th class="mobile_content">Price</th>
+                            <th class="mobile_content">Launch Date</th>
                             <th>Vote</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <h3>All Coins</h3>
                         <%- include('include/_show') %>
                     </tbody>
                 </table>
             </form>
-            
+        </div>
         </div>
     </main>
 <!-- /Main Site -->

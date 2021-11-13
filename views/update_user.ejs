@@ -19,24 +19,55 @@
          <!-- form handling -->
  <form method="POST" id="update_user">
     <div class="new_user">
+ 
         <div class="form-group">
-            <input type="hidden" name="id" value="<%= user._id %>">
-        </div>
-        <div class="form-group">
-            <label for="name" class="text-light">Vote for</label>
+            <label for="name" class="text-light">Coin Name</label>
             <input type="hidden" name="id" value="<%= user._id %>">
             <input type="text" name="name" value="<%= user.name %>" placeholder="">
         </div>
- 
+
+        <div class="form-group">
+            <label for="description" class="text-light">Description</label>
+            <input type="text" name="description" value="<%= user.description %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="chain" class="text-light">Chain</label>
+            <input type="text" name="chain" value="<%= user.chain %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="symbol" class="text-light">Symbol</label>
+            <input type="text" name="symbol" value="<%= user.symbol %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="marketcap" class="text-light">Market Cap</label>
+            <input type="text" name="marketcap" value="<%= user.marketcap %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="price" class="text-light">Price</label>
+            <input type="text" name="price" value="<%= user.price %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="launch" class="text-light">Launch Date</label>
+            <input type="text" name="launch" value="<%= user.launch %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="telegram_link" class="text-light">Telegram Link</label>
+            <input type="text" name="telegram_link" value="<%= user.telegram_link %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="coin_website" class="text-light">Coin Website</label>
+            <input type="text" name="coin_website" value="<%= user.coin_website %>" placeholder="">
+        </div>
+        
         <div class="form-group">
             <label for="votes" class="text-light">Votes</label>
-            <input type="text" name="votes" value="<%= user.votes%>" placeholder="">
+            <input type="text" name="votes" value="<%= user.votes %>" placeholder="">
         </div>
-   
+
     
     
         <div class="form-group">
-            <button type="submit" class="btn text-dark update">Vote</button>
+            <button type="submit" class="btn text-dark update">Update</button>
         </div>
 
     </div>
