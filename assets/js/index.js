@@ -129,7 +129,7 @@ var delay = ( function() {
         timer = setTimeout(callback, ms);
     };
 })();
-
+/*
 const cookieBox = document.querySelector(".wrapper"),
 acceptBtn = cookieBox.querySelector("button");
 acceptBtn.onclick = ()=>{
@@ -145,7 +145,7 @@ let checkCookie = document.cookie.indexOf("CookieBy=CoinBaba"); //checking our c
 //if cookie is set then hide the cookie box else show it
 checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
 
-
+*/
 function popup(){
     swal({
         title: "Voted!",
