@@ -48,23 +48,23 @@ if((window.location.pathname == "/") || (window.location.pathname=="/search")){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
-        var hasvoted=Cookies.get("iopl")
+ /*       var hasvoted=Cookies.get("iopl")
         if(cookiesEnabled()){
-            if(hasvoted !="true"){
+            if(hasvoted !="true"){ */
                 var request = {
                     "url" : `https://coinbaba.herokuapp.com/api/users/${id}`,
                     "method" : "PUT"
                 }
 
                 
-                    $.ajax(request).done(function(response){
+                    $.ajax(request).done(function(response){ /*
                         Cookies.set("iopl","true",{expires:1})
-                        popup()
+                        popup() */
                         delay(function(){
                             location.reload()
                         }, 2000 );
                     })
-            }
+           /* }
                 else{
                     popup24()
                 }
@@ -73,7 +73,7 @@ if((window.location.pathname == "/") || (window.location.pathname=="/search")){
             {
                 
                 popupcookie()
-            }
+            } */
         
 
     })
