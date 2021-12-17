@@ -22,7 +22,7 @@ exports.add_user = (req, res) =>{
 exports.update_user = (req, res) =>{
     axios.get('https://coinbaba.herokuapp.com/api/users', { params : { id : req.query.name }})
         .then(function(userdata){
-            res.render("update_user", { user : userdata.data})
+            res.render("update_user", { users : userdata.data})
         })
         .catch(err =>{
             res.send(err);
@@ -33,7 +33,7 @@ exports.coin_details = (req, res) =>{
     axios.get('https://coinbaba.herokuapp.com/api/users', { params : { id
      : req.query.id }})
     .then(function(userdata){
-        res.render("coin_details", { user : userdata.data})
+        res.render("coin_details", { users : userdata.data})
     })
     .catch(err =>{
         res.send(err);
