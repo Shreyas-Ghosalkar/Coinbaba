@@ -20,7 +20,7 @@ exports.add_user = (req, res) =>{
 }
 
 exports.update_user = (req, res) =>{
-    axios.get('https://coinbaba.herokuapp.com/api/users', { params : { id : req.query.name }})
+    axios.get('https://coinbaba.herokuapp.com/api/users', { params : { id : req.query.id }})
         .then(function(userdata){
             res.render("update_user", { users : userdata.data})
         })
