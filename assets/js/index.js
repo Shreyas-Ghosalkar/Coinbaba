@@ -17,7 +17,7 @@ $("#update_user").submit(function(event){
 
 
     var request = {
-        "url" : `http://localhost:3000/api/users/${data.id}`,
+        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -52,7 +52,7 @@ if((window.location.pathname == "/") || (window.location.pathname=="/search")){
         if(cookiesEnabled()){
             if(hasvoted !="true"){
                 var request = {
-                    "url" : `http://localhost:3000/api/users/?id=617ec847f3857e13b823a4e3
+                    "url" : `https://coinbaba.herokuapp.com/api/users/?id=617ec847f3857e13b823a4e3
                     "method" : "PUT"
                 }
 
@@ -94,7 +94,7 @@ $("#coin_details").submit(function(event){
     if(cookiesEnabled()){
     if(hasvoted !="true"){
     var request = {
-        "url" : `http://localhost:3000/api/users/${data.id}`,
+        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
         "method" : "PUT",
 
     }
