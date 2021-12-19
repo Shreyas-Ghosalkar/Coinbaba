@@ -17,7 +17,7 @@ $("#update_user").submit(function(event){
 
 
     var request = {
-        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
+        "url" : `http://localhost:3000/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -48,23 +48,23 @@ if((window.location.pathname == "/") || (window.location.pathname=="/search")){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
- /*       var hasvoted=Cookies.get("iopl")
+        var hasvoted=Cookies.get("iopl")
         if(cookiesEnabled()){
-            if(hasvoted !="true"){ */
+            if(hasvoted !="true"){
                 var request = {
-                    "url" : `https://coinbaba.herokuapp.com/api/users/${id}`,
+                    "url" : `http://localhost:3000/api/users/?id=617ec847f3857e13b823a4e3
                     "method" : "PUT"
                 }
 
                 
-                    $.ajax(request).done(function(response){ /*
+                    $.ajax(request).done(function(response){
                         Cookies.set("iopl","true",{expires:1})
-                        popup() */
+                        popup()
                         delay(function(){
                             location.reload()
                         }, 2000 );
                     })
-           /* }
+            }
                 else{
                     popup24()
                 }
@@ -73,7 +73,7 @@ if((window.location.pathname == "/") || (window.location.pathname=="/search")){
             {
                 
                 popupcookie()
-            } */
+            }
         
 
     })
@@ -94,7 +94,7 @@ $("#coin_details").submit(function(event){
     if(cookiesEnabled()){
     if(hasvoted !="true"){
     var request = {
-        "url" : `https://coinbaba.herokuapp.com/api/users/${data.id}`,
+        "url" : `http://localhost:3000/api/users/${data.id}`,
         "method" : "PUT",
 
     }
@@ -129,7 +129,7 @@ var delay = ( function() {
         timer = setTimeout(callback, ms);
     };
 })();
-/*
+
 const cookieBox = document.querySelector(".wrapper"),
 acceptBtn = cookieBox.querySelector("button");
 acceptBtn.onclick = ()=>{
@@ -145,7 +145,7 @@ let checkCookie = document.cookie.indexOf("CookieBy=CoinBaba"); //checking our c
 //if cookie is set then hide the cookie box else show it
 checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
 
-*/
+
 function popup(){
     swal({
         title: "Voted!",
