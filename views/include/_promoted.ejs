@@ -3,20 +3,22 @@
 <% for(var i = 0; i < users.length; i++) { %>
     <% for(var j = 0; j < promoted.length; j++) { %>
         <%if(users[i].name==promoted[j]){%>
-            <tr>                <td><%= i + 1 %></td>
-                <td> <a class="icon" href="/"><img src="img/<%= users[i].name %>.png" alt=""></a></td>
-                <td><a href="/coin_details?id=<%= users[i]._id%>"><%= users[i].name %></a></td>
+            <tr>
+                <td><%= i + 1 %></td>
+                <td> <a class="icon" href="/"><img src="img/<%= users[i].name %>.png" alt=""></a><a href="/coin_details?id=<%= users[i]._id%>"><%= users[i].name %></a></td>
                 <td class="mobile_content"><%= users[i].chain %></td>
                 <td class="mobile_content"><%= users[i].symbol %></td>
                 <td class="mobile_content"><%= users[i].marketcap %></td>
                 <td class="mobile_content"><%= users[i].price %></a></td>
                 <td class="mobile_content"><%= users[i].launch %></td>
-                <td class="btn btn-primary btn-sm mt-2 delete" data-id=<%= users[i]._id%> >
+                <td>
+                    
+            
+                    <a class="btn btn-primary btn-sm mt-2 delete" data-id=<%= users[i]._id%> >
                         <span class="text-gradient"><%= users[i].votes %></span>
-                   
+                    </a>
                 </td>
             </tr>
-
     <% }}} %>
     
     

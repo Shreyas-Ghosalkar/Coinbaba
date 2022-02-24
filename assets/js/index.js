@@ -45,26 +45,26 @@ function cookiesEnabled()
 
 
 if((window.location.pathname == "/") || (window.location.pathname=="/search")){
-    $ondelete = $(".table tbody td.delete");
-    $ondelete.click(function(){
+    $ondelete = $(".table tbody td a.delete");
+    $ondelete.on("click touchend",function(){
         var id = $(this).attr("data-id")
- /*       var hasvoted=Cookies.get("iopl")
+        var hasvoted=Cookies.get("iopl")
         if(cookiesEnabled()){
-            if(hasvoted !="true"){ */
+            if(hasvoted !="true"){
                 var request = {
                     "url" : `https://coinbaba.herokuapp.com/api/users/${id}`,
                     "method" : "PUT"
                 }
 
                 
-                    $.ajax(request).done(function(response){ /*
+                    $.ajax(request).done(function(response){
                         Cookies.set("iopl","true",{expires:1})
-                        popup() */
+                        popup()
                         delay(function(){
                             location.reload()
                         }, 2000 );
                     })
-           /* }
+            }
                 else{
                     popup24()
                 }
@@ -73,7 +73,7 @@ if((window.location.pathname == "/") || (window.location.pathname=="/search")){
             {
                 
                 popupcookie()
-            } */
+            }
         
 
     })
@@ -129,7 +129,7 @@ var delay = ( function() {
         timer = setTimeout(callback, ms);
     };
 })();
-/*
+
 const cookieBox = document.querySelector(".wrapper"),
 acceptBtn = cookieBox.querySelector("button");
 acceptBtn.onclick = ()=>{
@@ -145,7 +145,7 @@ let checkCookie = document.cookie.indexOf("CookieBy=CoinBaba"); //checking our c
 //if cookie is set then hide the cookie box else show it
 checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
 
-*/
+
 function popup(){
     swal({
         title: "Voted!",
