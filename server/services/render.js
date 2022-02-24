@@ -4,7 +4,7 @@ const axios = require('axios');
 
 exports.homeRoutes = (req, res) => {
     // Make a get request to /api/users
-    axios.get('https://coinbaba.herokuapp.com/api/users')
+    axios.get('http://coinbaba.herokuapp.com/api/users')
         .then(function(response){
             res.render('index', { users : response.data });
         })
@@ -20,7 +20,7 @@ exports.add_user = (req, res) =>{
 }
 
 exports.update_user = (req, res) =>{
-    axios.get('https://coinbaba.herokuapp.com/api/users', { params : { id : req.query.name }})
+    axios.get('http://coinbaba.herokuapp.com/api/users', { params : { id : req.query.name }})
         .then(function(userdata){
             res.render("update_user", { user : userdata.data})
         })
@@ -30,7 +30,7 @@ exports.update_user = (req, res) =>{
 }
 
 exports.coin_details = (req, res) =>{
-    axios.get('https://coinbaba.herokuapp.com/api/users', { params : { id
+    axios.get('http://coinbaba.herokuapp.com/api/users', { params : { id
      : req.query.id }})
     .then(function(userdata){
         res.render("coin_details", { user : userdata.data})
@@ -41,7 +41,7 @@ exports.coin_details = (req, res) =>{
 }
 
 exports.search = (req, res) =>{
-    axios.get('https://coinbaba.herokuapp.com/api/users',{ params : { name
+    axios.get('http://coinbaba.herokuapp.com/api/users',{ params : { name
     : req.query.name }})
         .then(function(response){
             res.render("search", { users : response.data });
